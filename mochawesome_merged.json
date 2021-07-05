@@ -1,0 +1,149 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 1,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-07-05T21:48:22.874Z",
+    "end": "2021-07-05T21:48:36.757Z",
+    "duration": 9646,
+    "testsRegistered": 2,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "515c2262-8110-47d7-85a4-52b310b8ded5",
+      "title": "",
+      "fullFile": "cypress/integration/spec.js",
+      "file": "cypress/integration/spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c1854369-f58a-4a83-ba42-da7864031cf9",
+          "title": "Cypress TodoMVC test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "adds 2 todos",
+              "fullTitle": "Cypress TodoMVC test adds 2 todos",
+              "timedOut": null,
+              "duration": 3530,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.new-todo').type('learn testing{enter}').type('be cool{enter}');\ncy.get('.todo-list li').should('have.length', 2); // make sure cypress-axe is working\n//cy.injectAxe()",
+              "err": {},
+              "uuid": "6e5efc99-a17f-4005-8679-b69764e49d5d",
+              "parentUUID": "c1854369-f58a-4a83-ba42-da7864031cf9",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6e5efc99-a17f-4005-8679-b69764e49d5d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3530,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "9940293f-f6b4-43d2-875e-393a600a6ecd",
+          "title": "Cypress TodoMVC test1",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "adds 2 todos",
+              "fullTitle": "Cypress TodoMVC test1 adds 2 todos",
+              "timedOut": null,
+              "duration": 6116,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "\"screenshots/spec.js/Cypress TodoMVC test1 -- adds 2 todos (failed).png\"",
+              "code": "cy.get('.new-todo').type('learn testing{enter}').type('be cool{enter}');\ncy.get('.todo-list li').should('have.length', 3); // make sure cypress-axe is working\n//cy.injectAxe()",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '2', expected '3'.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Not enough elements found. Found '2', expected '3'.\n    at Context.eval (https://todomvc.com/__cypress/tests?p=cypress\\integration\\spec.js:124:29)",
+                "diff": "- 2\n+ 3\n"
+              },
+              "uuid": "5edfc7cc-7bf2-4eae-a2b0-504ef73a41bd",
+              "parentUUID": "9940293f-f6b4-43d2-875e-393a600a6ecd",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5edfc7cc-7bf2-4eae-a2b0-504ef73a41bd"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 6116,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "5.2.0"
+    }
+  }
+}
